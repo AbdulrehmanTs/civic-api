@@ -1,38 +1,130 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  margin: 50px auto;
+}
+.title_2 {
+  text-align: center;
+  margin: 30px auto;
+}
+.cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.card {
+  max-width: 250px;
+  height: 180px;
+  border: 1px solid grey;
+  border-radius: 12px;
+  margin-right: 15px;
+  padding: 20px;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.card:hover {
+  background-color: aliceblue;
+}
+.voter_data_section div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.address_input {
+  width: 500px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid grey;
+  margin-right: 20px;
+}
+.id_input {
+  width: 100px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.find_btn button {
+  max-width: 100px;
+  color: aliceblue;
+  background-color: #2874a6;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.find_btn button:hover {
+  opacity: 0.9;
+}
+.userInfo {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userInfo div {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.userInfo h3 {
+  margin-bottom: 30px;
+}
+
+.findBy_state_section {
+  align-items: center;
+  margin-bottom: 200px;
+}
+.options-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.state_select {
+  width: 200px;
+  height: 30px;
+  border: 2px solid thistle;
+  outline: none;
+  border-right: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.state-btn {
+  width: 50px;
+  height: 30px;
+  border: 2px solid thistle;
+  outline: none;
+  border-left: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.officials {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ol {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  padding: 5px 20px;
+}
+li {
+  list-style-type: none;
+  text-align: left;
+  width: 200px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li:first-child {
+  width: 10px;
 }
