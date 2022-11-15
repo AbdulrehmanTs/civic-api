@@ -30,7 +30,8 @@ function App() {
   const handleFind = async () => {
     await axios
       .get(
-        `https://www.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyCGCE_BQpdH1EhR0RnhJt9xMfIpkJMTmqY&address=${voterAddress}&electionId=${voterId}`
+        // `https://civicinfo.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyCGCE_BQpdH1EhR0RnhJt9xMfIpkJMTmqY&address=${voterAddress}&electionId=${voterId}`
+        `https://civicinfo.googleapis.com/civicinfo/v2/voterinfo?address=${voterAddress}&officialOnly=true&returnAllAvailableData=true&key=AIzaSyCGCE_BQpdH1EhR0RnhJt9xMfIpkJMTmqY`
       )
       .then((result) => {
         console.log("voterData:", result);
@@ -48,7 +49,7 @@ function App() {
       .then((result) => {
         setStateData(result.data.divisions);
         setOfficials(result.data.officials);
-        console.log(result.data.officials);
+        console.log(result);
       })
       .catch((error) => {
         console.log(error);
